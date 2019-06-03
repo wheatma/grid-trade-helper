@@ -9,20 +9,24 @@
     <el-row :gutter="20">
       <el-col :span="12" :xs="24">
         <el-form-item label="开网价格" prop="startPrice">
-          <el-input
-            v-model.number="form.startPrice"
-            type="number"
+          <el-input-number
+            v-model="form.startPrice"
+            :min="0"
+            :step="0.01"
+            :controls="false"
             placeholder="请输入开网价格"
-          ></el-input>
+          ></el-input-number>
         </el-form-item>
       </el-col>
       <el-col :span="12" :xs="24">
         <el-form-item label="每网金额" prop="amount">
-          <el-input
-            v-model.number="form.amount"
-            type="number"
+          <el-input-number
+            v-model="form.amount"
+            :min="0"
+            :step="100"
+            :controls="false"
             placeholder="请输入每网金额"
-          ></el-input>
+          ></el-input-number>
         </el-form-item>
       </el-col>
     </el-row>
@@ -132,8 +136,8 @@
 
 <script>
 const DEFULT_FORM_MODAL = {
-  startPrice: '',
-  amount: '',
+  startPrice: 0.5,
+  amount: 1000,
   rate: 5,
   stress: 60,
   mode: false,
