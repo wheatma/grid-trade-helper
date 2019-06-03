@@ -193,7 +193,6 @@ class RowData {
       const tradeBuyAmount = this.getTradeBuyAmount();
       const planTradeSellMoney = tradeBuyAmount * this.sellPrice;
       const profit = planTradeSellMoney - this.getTradeBuyMoney();
-      console.log(profit);
       const retainProfit = profit * this.retainTimes;
       const tradeRetainAmount =
         Math.round(retainProfit / this.sellPrice / BASIC_TRADE_AMOUNT) *
