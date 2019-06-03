@@ -1,0 +1,15 @@
+# .gitlab-ci.yml 文件应放在你仓库的根目录下 
+
+pages: # 必须定义一个名为 pages 的 job
+  image: node:latest
+  stage: deploy
+  script:
+    - npm ci
+    - npm run build
+    - mv public public-vue # GitLab Pages 的钩子设置在 public 文件夹
+    - mv dist public # 重命名 dist 文件夹 (npm run build 之后的输出位置)
+  artifacts:
+    paths:
+      - public # artifact path 一定要在 /public , 这样 GitLab Pages 才能获取
+  only:
+    - master

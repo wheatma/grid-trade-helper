@@ -2,7 +2,7 @@
 
 📜A tool for generating grid trade table.
 
-![logo](/public/img/grid-trade.png)
+![logo](/public/img/logo.png)
 
 ## Change log
 [Change log](CHANGELOG.md)
