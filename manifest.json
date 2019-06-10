@@ -1,0 +1,15 @@
+{
+  "name": "grid-trade-helper",
+  "short_name": "grid-trade-helper",
+  "icons": [
+    {
+      "src": "./img/icons/favicon.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#4DBA87"
+}
