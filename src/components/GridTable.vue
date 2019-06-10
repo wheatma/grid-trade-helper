@@ -107,7 +107,7 @@ export default {
               prop: 'profitRate',
               label: '盈利比例',
               formatter(row, cellValue, value) {
-                return `${value}%`;
+                return isNaN(value) ? value : `${value}%`;
               }
             }
           ];
