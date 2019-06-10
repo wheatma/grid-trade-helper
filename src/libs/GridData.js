@@ -143,7 +143,7 @@ class RowData {
   }
 
   getProfitRate() {
-    return (this.getProfit() * 100) / this.buyMoney;
+    return this.buyMoney > 0 ? (this.getProfit() * 100) / this.buyMoney : '-';
   }
 
   getData() {
@@ -225,7 +225,10 @@ class RowData {
   }
 
   getTradeProfitRate() {
-    return (this.getTradeProfit() * 100) / this.getTradeBuyMoney();
+    const tradeBuyMoney = this.getTradeBuyMoney();
+    return tradeBuyMoney > 0
+      ? (this.getTradeProfit() * 100) / this.getTradeBuyMoney()
+      : '-';
   }
 
   getTradeData() {
