@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "grid-trade-helper",
+  "builds": [
+    {"src": "package.json", "use": "@now/static-build"}
+  ],
+   "routes": [
+      {"src": "/service-worker.js", "headers": { "cache-control": "s-maxage=0" } },
+      { "handle": "filesystem" },
+      {"src": ".*", "dest": "/index.html"}
+    ]
+}
