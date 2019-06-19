@@ -1,6 +1,11 @@
 {
   "version": 2,
   "name": "grid-trade-helper",
+  "build": {
+    "env": {
+      "DEPLOY": "now"
+    }
+  },
   "builds": [
     {"src": "package.json", "use": "@now/static-build"}
   ],
