@@ -1,5 +1,7 @@
 # 网格交易助手
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ba8d0fdfd8434768a45da02b961e2ae7)](https://app.codacy.com/app/wheatma/grid-trade-helper?utm_source=github.com&utm_medium=referral&utm_content=wheatma/grid-trade-helper&utm_campaign=Badge_Grade_Dashboard)
+
 📜A tool for generating grid trade table.
 
 ![logo](/public/img/logo.png)
