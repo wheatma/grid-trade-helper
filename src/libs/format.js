@@ -9,5 +9,5 @@ export const formatPrice = num => {
   if (isNaN(num)) {
     return num;
   }
-  return Number(num).toFixed(2);
+  return Number(num).toFixed(3);
 };
