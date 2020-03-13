@@ -27,13 +27,13 @@ export default class GridData {
     let row = 0;
     const len = Math.floor(stress / rate);
     let data = [];
-    while (row <= len) {
+    while (row < len) {
       data.push(this.getRowData(row));
       if (this.trapTimes && row) {
-        if (!(row % this.trapTimes)) {
+        if (!((row + 1) % this.trapTimes)) {
           data.push(this.getRowData(row, 'middle'));
         }
-        if (!(row % (this.trapTimes * 2))) {
+        if (!((row + 1) % (this.trapTimes * 2))) {
           data.push(this.getRowData(row, 'large'));
         }
       }
