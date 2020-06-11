@@ -8,7 +8,17 @@
   >
     <el-row :gutter="20">
       <el-col :span="12" :xs="24">
-        <el-form-item label="开网价格" prop="startPrice">
+        <el-form-item prop="startPrice">
+          <template v-slot:label
+            >开网价格
+            <el-tooltip
+              effect="dark"
+              content="网格第一次买入的价格"
+              placement="top"
+            >
+              <i class="el-icon-question"></i>
+            </el-tooltip>
+          </template>
           <el-input-number
             v-model="form.startPrice"
             :min="0"
@@ -44,7 +54,17 @@
         </el-form-item>
       </el-col>
       <el-col :span="12" :xs="24">
-        <el-form-item label="压力测试" required>
+        <el-form-item required>
+          <template v-slot:label
+            >压力测试
+            <el-tooltip
+              effect="dark"
+              content="相比开网价格可承受的最大跌幅"
+              placement="top"
+            >
+              <i class="el-icon-question"></i>
+            </el-tooltip>
+          </template>
           <el-slider
             v-model.number="form.stress"
             :marks="marks.stress"
@@ -56,7 +76,7 @@
         </el-form-item>
       </el-col>
     </el-row>
-    <el-row>
+    <el-row :gutter="20">
       <el-col :span="12" :xs="24">
         <el-form-item prop="mode">
           <template v-slot:label
@@ -84,18 +104,20 @@
         </el-form-item>
       </el-col>
     </el-row>
-    <el-row v-if="form.retain">
-      <el-form-item label="利润倍数">
-        <el-input-number
-          v-model="form.retainTimes"
-          :step="1"
-          :min="1"
-          placeholder="请输入张网系数"
-          step-strictly
-        ></el-input-number>
-      </el-form-item>
+    <el-row v-if="form.retain" :gutter="20">
+      <el-col :span="12" :xs="24">
+        <el-form-item label="利润倍数">
+          <el-input-number
+            v-model="form.retainTimes"
+            :step="1"
+            :min="1"
+            placeholder="请输入利润倍数"
+            step-strictly
+          ></el-input-number>
+        </el-form-item>
+      </el-col>
     </el-row>
-    <el-row v-if="form.raise">
+    <el-row v-if="form.raise" :gutter="20">
       <el-col :span="12" :xs="24">
         <el-form-item label="加码幅度">
           <el-slider
@@ -108,22 +130,24 @@
         </el-form-item>
       </el-col>
     </el-row>
-    <el-row v-if="form.trap">
-      <el-form-item label="张网系数">
-        <el-input-number
-          v-model="form.trapTimes"
-          :step="1"
-          :min="2"
-          :max="Math.floor(50 / form.rate)"
-          placeholder="请输入张网系数"
-          step-strictly
-        ></el-input-number>
-        （中网{{ form.trapTimes * form.rate }}%， 大网{{
-          form.trapTimes * form.rate * 2
-        }}%）
-      </el-form-item>
+    <el-row v-if="form.trap" :gutter="20">
+      <el-col :span="12" :xs="24">
+        <el-form-item label="张网系数">
+          <el-input-number
+            v-model="form.trapTimes"
+            :step="1"
+            :min="2"
+            :max="Math.floor(50 / form.rate)"
+            placeholder="请输入张网系数"
+            step-strictly
+          ></el-input-number>
+          （中网{{ form.trapTimes * form.rate }}%， 大网{{
+            form.trapTimes * form.rate * 2
+          }}%）
+        </el-form-item>
+      </el-col>
     </el-row>
-    <el-row>
+    <el-row :gutter="20">
       <el-form-item class="form-opt">
         <el-button type="primary" @click="submitForm('gridForm')"
           >生成网格</el-button
