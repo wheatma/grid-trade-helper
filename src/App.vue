@@ -2,7 +2,7 @@
   <div id="app">
     <el-container>
       <el-header>
-        <span class="site-name">网格交易助手v2.0</span>
+        <span class="site-name">网格交易助手V2.0</span>
         <img class="site-slogan" src="../public/img/slogan.png" />
       </el-header>
       <el-main>
@@ -52,11 +52,15 @@ export default {
 </script>
 
 <style>
+body {
+  margin: 0;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  overflow-x: hidden;
 }
 .site-name {
   font-size: 20px;
