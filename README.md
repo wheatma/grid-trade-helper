@@ -1,12 +1,13 @@
 # 网格交易助手
 
-📜A tool for generating grid trade table.
+📜A tool for generating grid trade table. Try it out: [https://grid.wheat.now.sh](https://grid.wheat.now.sh/)
 
 ![logo](/public/img/logo.png)
 
-## Change log
 
-[Change log](CHANGELOG.md)
+## ChangeLog
+
+[Changelog](CHANGELOG.md)
 
 ## Reference
 
