@@ -4,7 +4,7 @@
 
 ![logo](/public/img/logo.png)
 
-## ChangeLog
+## Changelog
 
 [Changelog](CHANGELOG.md)
 
