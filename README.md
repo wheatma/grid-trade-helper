@@ -4,7 +4,6 @@
 
 ![logo](/public/img/logo.png)
 
-
 ## ChangeLog
 
 [Changelog](CHANGELOG.md)
