@@ -1,6 +1,6 @@
 # 网格交易助手
 
-📜A tool for generating grid trade data table. Try it out: [https://grid.wheat.now.sh](https://grid.wheat.now.sh/)
+📜A tool for generating grid trade data table. Try it out: [https://grid-wheat.vercel.app/](https://grid-wheat.vercel.app/)
 
 ![logo](/public/img/logo.png)
 
